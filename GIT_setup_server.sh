@@ -1,11 +1,12 @@
 #! /bin/bash
 # Set env vars for script
+export PATH=${HOME}/.local/bin:$PATH
 export PROJECTSLUG="cloudshare"
 export GIT_SLUG="${PROJECTSLUG}.git"
 export GIT_REPO="${HOME}/${PROJECTSLUG}/repo/${GIT_SLUG}/"
 export GIT_WORK_TREE="${HOME}/${PROJECTSLUG}/src/"
-export REMOTE="https://github.com/${GIT_USER}/${PROJECTSLUG}"
-export PATH=${HOME}/.local/bin:$PATH
+export GIT_USER="fusionarc"
+export REMOTE="https://github.com/${GIT_USER}/${PROJECTSLUG}.git"
 echo 'Creating working directory and git repo...'
 # Make the required directories
 sudo chown -R $USER $HOME
